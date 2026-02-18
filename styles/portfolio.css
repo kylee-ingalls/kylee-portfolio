@@ -1,0 +1,19 @@
+body {
+}
+
+/* Headings */
+h1 {
+  font-family: "Chewy", cursive;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+/* Paragraphs */
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
