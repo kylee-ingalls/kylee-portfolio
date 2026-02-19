@@ -1,19 +1,71 @@
+:root {
+  --button-color: #ff273c;
+  --button-color-hover: #d61f30; /* darker red */
+  --secondary-color: #f7f5fd;
+  --font-heading: "Chewy", cursive;
+  --font-body: "Poppins", sans-serif;
+}
+
 body {
+  font-family: var(--font-body);
 }
 
 /* Headings */
-h1 {
-  font-family: "Chewy", cursive;
+h1,
+h2 {
+  font-family: var(--font-heading);
   font-weight: 400;
 }
 
-h2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
+h3 {
+  font-weight: 500;
 }
 
 /* Paragraphs */
 p {
-  font-family: "Poppins", sans-serif;
   font-weight: 500;
+}
+
+/* Buttons */
+.btn-branding {
+  background-color: var(--button-color);
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-branding:hover {
+  background-color: var(--button-color-hover);
+  color: white;
+}
+
+.btn-branding:focus-visible {
+  outline: 3px solid black;
+  outline-offset: 2px;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #ffe181;
+  padding: 50px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  padding-top: 30px;
+}
+
+.hero h2 {
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
 }
