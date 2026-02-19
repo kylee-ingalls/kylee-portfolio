@@ -11,10 +11,12 @@ body {
 }
 
 /* Headings */
-h1,
+h1 {
+  font-family: var(--font-heading);
+}
 h2 {
   font-family: var(--font-heading);
-  font-weight: 400;
+  font-size: 40px;
 }
 
 h3 {
@@ -24,6 +26,11 @@ h3 {
 /* Paragraphs */
 p {
   font-weight: 500;
+  line-height: 1.7;
+}
+
+.container > .row:first-child {
+  padding-top: 40px;
 }
 
 /* Buttons */
@@ -49,6 +56,29 @@ p {
   outline-offset: 2px;
 }
 
+.btn-branding-outline {
+  background-color: white;
+  color: #885df1;
+  padding: 10px 25px;
+  border: 2px solid #885df1;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-branding-outline:hover {
+  background-color: var(--secondary-color);
+  color: #885df1;
+  border: 2px solid #885df1;
+}
+
+.btn-branding-outline:focus-visible {
+  outline: 3px solid black;
+  outline-offset: 2px;
+}
+
 /* Hero Section */
 .hero {
   background-color: #ffe181;
@@ -57,7 +87,7 @@ p {
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 8vw, 7.5rem);
+  font-size: 90px;
   padding-top: 30px;
 }
 
@@ -68,4 +98,101 @@ p {
 
 .hero p {
   font-size: 20px;
+}
+
+/* Homepage Section */
+.project-description {
+  padding: 120px 60px 0px;
+}
+
+.project-description p {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  line-height: 1.7;
+}
+
+/* Make all grid images smaller */
+.row img {
+  max-width: 80%; /* images will never be wider than 80% of their column */
+  height: auto; /* keep aspect ratio */
+  display: block;
+  margin: 0 auto; /* centers the image in its column */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 900px) {
+  /* Hero Section */
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  /* Project/Main Sections */
+  .project-description h2 {
+    font-size: 24px;
+  }
+
+  .project-description p {
+    font-size: 14px;
+  }
+
+  .project-description {
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Optional: buttons slightly smaller */
+  .btn-branding,
+  .btn-branding-outline {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  /* Hero Section */
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 40px 10px;
+  }
+
+  /* Project/Main Sections */
+  .project-description h2 {
+    font-size: 20px;
+  }
+
+  .project-description p {
+    font-size: 12px;
+  }
+
+  .project-description {
+    padding: 15px 10px;
+    text-align: center;
+  }
+
+  .container > .row:first-child {
+    margin-top: 20px; /* less space on tablets/phones */
+  }
 }
