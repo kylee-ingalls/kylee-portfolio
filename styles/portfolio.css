@@ -1,198 +1,165 @@
 :root {
   --button-color: #ff273c;
-  --button-color-hover: #d61f30; /* darker red */
+  --button-color-hover: #d61f30;
   --secondary-color: #f7f5fd;
+  --button-color-filled: #3a39ff;
+  --button-color-filled-hover: #2a28b8;
   --font-heading: "Chewy", cursive;
   --font-body: "Poppins", sans-serif;
 }
 
 body {
   font-family: var(--font-body);
+  margin: 0;
 }
 
-/* Headings */
+/*TYPOGRAPHY*/
+
 h1 {
   font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4rem);
 }
+
 h2 {
   font-family: var(--font-heading);
-  font-size: 40px;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 h3 {
   font-weight: 500;
 }
 
-/* Paragraphs */
 p {
   font-weight: 500;
   line-height: 1.7;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
 }
 
-.container > .row:first-child {
-  padding-top: 40px;
-}
+/*BUTTONS*/
 
-/* Buttons */
-.btn-branding {
-  background-color: var(--button-color);
-  color: white;
-  padding: 10px 25px;
-  border: none;
+.btn-branding,
+.btn-branding-outline,
+.btn-branding-filled {
+  padding: 0.6rem 1.5rem;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 500;
+  transition: 0.2s ease-in-out;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+}
+
+/* Red button */
+.btn-branding {
+  background-color: var(--button-color);
+  color: white;
+  border: none;
 }
 
 .btn-branding:hover {
   background-color: var(--button-color-hover);
-  color: white;
 }
 
-.btn-branding:focus-visible {
-  outline: 3px solid black;
-  outline-offset: 2px;
-}
-
-.btn-branding-outline {
-  background-color: white;
-  color: #885df1;
-  padding: 10px 25px;
-  border: 2px solid #885df1;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.btn-branding-outline:hover {
-  background-color: var(--secondary-color);
-  color: #885df1;
-  border: 2px solid #885df1;
-}
-
+.btn-branding:focus-visible,
 .btn-branding-outline:focus-visible {
   outline: 3px solid black;
   outline-offset: 2px;
 }
 
-/* Hero Section */
+/* Outline button */
+.btn-branding-outline {
+  background-color: white;
+  color: #885df1;
+  border: 2px solid #885df1;
+}
+
+.btn-branding-outline:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Filled blue button */
+.btn-branding-filled {
+  background-color: var(--button-color-filled);
+  color: white;
+  border: none;
+}
+
+.btn-branding-filled:hover {
+  background-color: var(--button-color-filled-hover);
+  color: white;
+}
+
+/*HERO SECTION*/
+
 .hero {
   background-color: #ffe181;
-  padding: 50px;
   text-align: center;
+  padding: clamp(3rem, 8vw, 6rem) 1.25rem;
 }
 
 .hero h1 {
-  font-size: 90px;
-  padding-top: 30px;
+  padding-top: 1rem;
 }
 
 .hero h2 {
-  font-size: 40px;
-  padding-bottom: 10px;
+  padding-bottom: 0.5rem;
 }
 
 .hero p {
-  font-size: 20px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
-/* Homepage Section */
+/*PROJECT SECTION*/
+
 .project-description {
-  padding: 120px 60px 0px;
+  padding: clamp(2.5rem, 8vw, 7rem) clamp(1.25rem, 6vw, 3.75rem) 0;
 }
 
-.project-description p {
-  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-  line-height: 1.7;
-}
-
-/* Make all grid images smaller */
-.row img {
-  max-width: 80%; /* images will never be wider than 80% of their column */
-  height: auto; /* keep aspect ratio */
+.project-image {
+  max-width: 80%;
+  margin: 0 auto;
   display: block;
-  margin: 0 auto; /* centers the image in its column */
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 900px) {
-  /* Hero Section */
-  .hero h1 {
-    font-size: 50px;
-  }
+/*ABOUT SECTION*/
 
-  .hero h2 {
-    font-size: 28px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .hero {
-    padding: 60px 20px;
-  }
-
-  /* Project/Main Sections */
-  .project-description h2 {
-    font-size: 24px;
-  }
-
-  .project-description p {
-    font-size: 14px;
-  }
-
-  .project-description {
-    padding: 20px;
-    text-align: center;
-  }
-
-  /* Optional: buttons slightly smaller */
-  .btn-branding,
-  .btn-branding-outline {
-    font-size: 0.9rem;
-    padding: 8px 20px;
-  }
+.about-section {
+  padding: clamp(3rem, 10vw, 7rem) 1.25rem;
 }
 
-/* Extra small screens */
-@media (max-width: 480px) {
-  /* Hero Section */
-  .hero h1 {
-    font-size: 40px;
-  }
+.about-section h1 {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1.2;
+}
 
-  .hero h2 {
-    font-size: 20px;
-  }
+.about-section h2 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
 
-  .hero p {
-    font-size: 14px;
-  }
+.about-section-content {
+  padding: 1.5rem 0;
+}
 
-  .hero {
-    padding: 40px 10px;
-  }
+/*IMAGES*/
 
-  /* Project/Main Sections */
-  .project-description h2 {
-    font-size: 20px;
-  }
+.headshot {
+  max-width: 430px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+}
 
-  .project-description p {
-    font-size: 12px;
-  }
+.certifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 1rem;
+}
 
-  .project-description {
-    padding: 15px 10px;
-    text-align: center;
-  }
-
-  .container > .row:first-child {
-    margin-top: 20px; /* less space on tablets/phones */
-  }
+.certifications img {
+  max-width: 100px;
+  height: auto;
 }
