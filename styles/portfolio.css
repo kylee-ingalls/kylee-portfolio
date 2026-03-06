@@ -251,7 +251,7 @@ body.home nav {
 /*PROJECT SECTION*/
 
 .project-description {
-  padding: clamp(2.5rem, 8vw, 7rem) clamp(1.25rem, 6vw, 3.75rem) 0;
+  padding: 2rem 2rem 0;
 }
 
 .project-image {
@@ -366,19 +366,48 @@ body.home nav {
 }
 
 /* Grid images styling */
+/* ----- PROJECT GRID SECTIONS ----- */
+
+/* Remove old image padding and enforce rounding */
 .grid-img {
-  max-width: 350px; /* smaller than full column width */
-  width: 100%; /* keeps it responsive */
-  border-radius: 8px; /* rounded corners */
+  max-width: 350px;
+  width: 100%;
   display: block;
-  margin-left: auto; /* center horizontally in column */
+  margin-left: auto;
   margin-right: auto;
-  padding-top: 8rem;
+  border-radius: 8px; /* ensures all images are rounded */
+  padding-top: 0; /* remove old top padding */
 }
 
+/* Control spacing between each project section */
+.row.d-flex.align-items-center {
+  margin-top: 3rem; /* space above each section */
+  margin-bottom: 3rem; /* space below each section */
+}
+
+/* No extra space above the first section */
+.container > .row.d-flex.align-items-center:first-child {
+  margin-top: 0;
+}
+
+/* Adjust project description padding inside each column */
+.project-description {
+  padding: 2rem 1.5rem 0; /* top 2rem, sides 1.5rem, bottom 0 */
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .grid-img {
     max-width: 200px;
+  }
+
+  .row.d-flex.align-items-center {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-description {
+    padding: 1.5rem 1rem 0;
   }
 }
 
@@ -392,6 +421,7 @@ footer .email-link {
 
 footer .email-link:hover {
   color: var(--button-color-filled);
+  text-decoration: underline;
 }
 
 footer .social-links a {
@@ -421,8 +451,10 @@ footer .contact-box p {
 
 footer .contact-box {
   background-color: #c7e9f1;
-  padding: 30px 120px;
+  padding: 30px 80px;
   border-radius: 8px;
+  max-width: 70%;
+  margin: 0 auto;
 }
 
 @media (max-width: 576px) {
@@ -447,4 +479,14 @@ footer .contact-box {
 footer .social-links a {
   width: 44px;
   height: 44px;
+}
+
+footer {
+  padding-top: 6rem;
+}
+
+@media (max-width: 576px) {
+  footer {
+    padding-top: 0;
+  }
 }

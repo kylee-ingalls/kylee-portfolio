@@ -28,54 +28,111 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/portfolio.css" />
   </head>
-  <!-- Navigation Bar -->
 
-  <div class="container">
+  <body class="contact-page">
+    <!-- Navigation Bar -->
     <nav>
-      <a href="index.html">
-        <img src="images/logo.png" alt="Kylee logo" class="logo" />
-      </a>
+      <div class="nav-container">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Kylee logo" class="logo" />
+        </a>
 
-      <input type="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
 
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </div>
     </nav>
-  </div>
-  <body>
-    <div class="content-container container">
-    <section class="contact-hero container">
-  <div class="contact-grid">
 
-    <div class="contact-text">
-      <h1 class="mb-5">Let's get in touch!</h1>
-      <p class="mb-5">
-        I'm currently available for freelance work and full-time positions.
-      </p>
+    <!-- Contact Hero Section -->
+    <main class="content-container">
+      <section class="contact-hero">
+        <div
+          class="contact-grid d-flex flex-column flex-md-row align-items-center justify-content-around"
+        >
+          <!-- Text Left -->
+          <div class="contact-text flex-md-1 pe-md-4" style="max-width: 500px">
+            <h1 class="mb-4">Let's get in touch!</h1>
+            <p class="mb-4">
+              I'm currently available for freelance work and full-time
+              positions.
+            </p>
+            <a href="mailto:kylee.ingalls@gmail.com" class="btn btn-branding">
+              Email Me
+            </a>
+          </div>
 
-      <a href="mailto:kylee.ingalls@gmail.com" class="btn btn-branding">
-        Email Me
-      </a>
-    </div>
+          <!-- Image Right -->
+          <div
+            class="contact-image flex-md-1 text-md-end mt-4 mt-md-0"
+            style="max-width: 400px"
+          >
+            <a
+              href="https://www.linkedin.com/in/kylee-ingalls/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="images/Headshot.png"
+                alt="Headshot of Kylee Ingalls"
+                class="headshot"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
 
-    <div class="contact-image">
-      <img
-        src="images/Headshot.png"
-        alt="Headshot of Kylee Ingalls"
-        class="headshot"
-      />
-    </div>
+    <!-- Footer -->
+    <footer>
+      <div
+        class="contact-box d-flex justify-content-between align-items-center mb-5"
+      >
+        <div>
+          <h3>Work Inquiry</h3>
+          <p class="text-muted">Let’s create something together.</p>
+        </div>
+        <div>
+          <a href="mailto:kylee.ingalls@gmail.com" class="btn btn-branding"
+            >Contact Kylee</a
+          >
+        </div>
+      </div>
 
-  </div>
-</section>
+      <div class="d-flex justify-content-center mb-3">
+        <a href="mailto:kylee.ingalls@gmail.com" class="email-link">
+          kylee.ingalls@gmail.com
+        </a>
+      </div>
+
+      <div class="social-links d-flex justify-content-center mb-3">
+        <a
+          href="https://www.linkedin.com/in/kylee-ingalls/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          href="https://github.com/kylee-ingalls"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
