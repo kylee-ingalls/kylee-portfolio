@@ -1,9 +1,9 @@
 :root {
-  --button-color: #ff273c;
-  --button-color-hover: #d61f30;
+  --button-color: #a12f1b;
+  --button-color-hover: #5c010a;
   --secondary-color: #f7f5fd;
-  --button-color-filled: #3a39ff;
-  --button-color-filled-hover: #2a28b8;
+  --button-color-filled: #02a6a3;
+  --button-color-filled-hover: #700047;
   --font-heading: "Chewy", cursive;
   --font-body: "Poppins", sans-serif;
 }
@@ -59,6 +59,7 @@ p {
 
 .btn-branding:hover {
   background-color: var(--button-color-hover);
+  color: white;
 }
 
 .btn-branding:focus-visible,
@@ -70,12 +71,12 @@ p {
 /* Outline button */
 .btn-branding-outline {
   background-color: white;
-  color: #885df1;
-  border: 2px solid #885df1;
+  color: #025f5d;
+  border: 2px solid #025f5d;
 }
 
 .btn-branding-outline:hover {
-  background-color: var(--secondary-color);
+  background-color: #d2fdfc;
 }
 
 /* Filled blue button */
@@ -95,7 +96,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 1rem;
+  padding: 5px 1rem;
 }
 
 .nav-links {
@@ -114,19 +115,19 @@ nav {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #3a39ff;
+  color: #a12f1b;
   text-decoration: underline;
 }
 
 /* Default nav */
 nav {
-  background-color: white;
-  padding: 10px 1.25rem;
+  background-color: #fdfaaf;
+  padding: 1px 1.25rem;
 }
 
 /* Homepage nav */
 body.home nav {
-  background-color: #ffe181;
+  background-color: white;
 }
 
 /* hamburger menu*/
@@ -193,7 +194,7 @@ body.home nav {
 
 /* Full-width nav background */
 body.home nav {
-  background-color: #ffe181;
+  background-color: #fdfaaf;
   width: 100%;
 }
 
@@ -220,13 +221,14 @@ body.home nav {
 /*HERO SECTION*/
 
 .hero {
-  background-color: #ffe181;
+  background-color: #fdfaaf;
   text-align: center;
-  padding: clamp(3rem, 8vw, 5rem) 1.25rem;
+  padding: clamp(1.5rem, 4vw, 1.25rem) 1.25rem;
 }
 
 .hero h1 {
   padding-top: 0rem;
+  font-size: clamp(6rem, 6vw, 4rem);
 }
 
 .hero h2 {
@@ -318,7 +320,7 @@ body.home nav {
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 150px;
   height: auto;
 }
 
@@ -442,7 +444,7 @@ footer .social-links a {
 
 footer .social-links a:hover {
   color: white;
-  background: var(--button-color-filled);
+  background: #a8006b;
 }
 
 footer .contact-box p {
@@ -450,7 +452,7 @@ footer .contact-box p {
 }
 
 footer .contact-box {
-  background-color: #c7e9f1;
+  background-color: #d2fdfc;
   padding: 30px 80px;
   border-radius: 8px;
   max-width: 70%;
