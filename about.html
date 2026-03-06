@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kylee's Portfolio</title>
+    <meta content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kylee is a front-end developer and designer specializing in accessibility with multiple credentials and degrees. She is based in the United States."
+    />
+    <title>About front-end developer and UX designer - Kylee Ingalls</title>
 
     <!-- Bootstrap -->
     <link
@@ -30,11 +34,11 @@
   </head>
   <!-- Navigation Bar -->
 
-  <div class="container">
-    <nav>
-      <a href="index.html">
-        <img src="images/logo.png" alt="Kylee logo" class="logo" />
-      </a>
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" title="Homepage"
+        ><img src="images/logo.png" class="logo" alt="Kylee logo"
+      /></a>
 
       <input type="checkbox" id="menu-toggle" />
       <label for="menu-toggle" class="hamburger">
@@ -44,13 +48,16 @@
       </label>
 
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" title="Homepage">Home</a></li>
+        <li>
+          <a href="about.html" class="active" title="About Kylee">About</a>
+        </li>
+        <li><a href="work.html" title="Kylee's work">Work</a></li>
+        <li><a href="contact.html" title="Contact Kylee">Contact</a></li>
       </ul>
-    </nav>
-  </div>
+    </div>
+  </nav>
+
   <body>
     <div class="content-container container">
       <div class="row">
