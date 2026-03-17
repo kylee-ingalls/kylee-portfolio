@@ -71,7 +71,7 @@ p {
 /* Outline button */
 .btn-branding-outline {
   background-color: white;
-  color: #025f5d;
+  color: #026461;
   border: 2px solid #025f5d;
 }
 
@@ -81,7 +81,7 @@ p {
 
 /* Filled blue button */
 .btn-branding-filled {
-  background-color: var(--button-color-filled);
+  background-color: #026461;
   color: white;
   border: none;
 }
@@ -121,7 +121,7 @@ nav {
 
 /* Default nav */
 nav {
-  background-color: #fdfaaf;
+  background-color: #ffe181;
   padding: 1px 1.25rem;
 }
 
@@ -194,7 +194,7 @@ body.home nav {
 
 /* Full-width nav background */
 body.home nav {
-  background-color: #fdfaaf;
+  background-color: #ffe181;
   width: 100%;
 }
 
@@ -221,7 +221,7 @@ body.home nav {
 /*HERO SECTION*/
 
 .hero {
-  background-color: #fdfaaf;
+  background-color: #ffe181;
   text-align: center;
   padding: clamp(1.5rem, 4vw, 1.25rem) 1.25rem;
 }
@@ -309,6 +309,8 @@ body.home nav {
 
 .certifications {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 1rem;
@@ -491,4 +493,17 @@ footer {
   footer {
     padding-top: 0;
   }
+}
+
+/* Additional Accessibility Enhancements */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
