@@ -91,14 +91,16 @@ p {
   color: white;
 }
 
-/*NAVIGATION BAR SECTION*/
+/* ---------------- NAVIGATION BAR ---------------- */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 1rem;
+  background-color: #ffe181;
 }
 
+/* Navigation links */
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -107,6 +109,7 @@ nav {
   padding: 0;
 }
 
+/* Links styling */
 .nav-links a {
   text-decoration: none;
   color: #272142;
@@ -119,22 +122,14 @@ nav {
   text-decoration: underline;
 }
 
-/* Default nav */
-nav {
-  background-color: #ffe181;
-  padding: 1px 1.25rem;
-}
+/* ---------------- HAMBURGER TOGGLE ---------------- */
 
-/* Homepage nav */
-body.home nav {
-  background-color: white;
-}
-
-/* hamburger menu*/
+/* Hide checkbox */
 #menu-toggle {
   display: none;
 }
 
+/* Hamburger icon */
 .hamburger {
   display: none; /* hidden on desktop */
   flex-direction: column;
@@ -142,6 +137,9 @@ body.home nav {
   width: 25px;
   height: 18px;
   cursor: pointer;
+
+  position: relative;
+  z-index: 20;
 }
 
 .hamburger span {
@@ -152,22 +150,34 @@ body.home nav {
   transition: 0.3s;
 }
 
-/* responsive: mobile */
+/* ---------------- TOGGLE MENU ---------------- */
+
+/* Closed state (mobile) */
+.nav-links {
+  max-height: none; /* desktop: show by default */
+  overflow: visible;
+  transition: max-height 0.3s ease;
+}
+
+/* Responsive: mobile */
 @media (max-width: 768px) {
+  /* Show hamburger */
   .hamburger {
     display: flex;
   }
 
+  /* Mobile nav */
   .nav-links {
+    flex-direction: column;
     position: absolute;
     top: 60px;
     right: 0;
     width: 100%;
-    flex-direction: column;
     background-color: white;
-    max-height: 0;
+    max-height: 0; /* start closed */
     overflow: hidden;
-    transition: max-height 0.3s ease;
+
+    z-index: 10;
   }
 
   .nav-links li {
@@ -175,7 +185,7 @@ body.home nav {
     padding: 1rem 0;
   }
 
-  /* show menu when checked */
+  /* Open menu when checkbox checked */
   #menu-toggle:checked ~ .nav-links {
     max-height: 500px; /* enough to show all links */
   }

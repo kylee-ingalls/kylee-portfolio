@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Kylee is a front-end developer and designer specializing in accessibility with multiple credentials and degrees. She is based in the United States."
@@ -41,7 +41,8 @@
           ><img src="images/logo.png" class="logo" alt="Kylee logo"
         /></a>
 
-          <label for="menu-toggle" class="hamburger">
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
       <span class="visually-hidden">Toggle navigation menu</span>
       <span></span>
       <span></span>
@@ -90,12 +91,14 @@
               <p class="text-center text-muted">Web Content & Accessibility Specialist</p>
             </div>
             <div class="col-md-6 mb-5">
-              <img src="images/HOA.png" 
-              alt="Screenshot of a brand kit" 
-              class="img-fluid project-img" />
+              <div class="project-card" tabindex="0">
+                <img src="images/HOA.png" 
+                alt="Rosewood HOA brand kit screenshot" 
+                class="img-fluid project-img" />
               <h3 class="text-center"> Rosewood HOA Rebrand</h3>
               <p class="text-center text-muted">Designer</p>
             </div>
+          </div>
             <div class="col-md-6 mb-5">
               <a href="https://www.figma.com/design/BOCcTDJpigTFScI8qVZWZT/Portfolio-Wireframe?node-id=0-1&p=f&t=HwnwECj4WflqXFaC-0" target="_blank" rel="noopener noreferrer">
                 <img src="images/Design - Figma.png" 
@@ -148,6 +151,15 @@
       </div>
     </footer>
      <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+        const navLinks = document.querySelectorAll('.nav-links a');
+  const menuToggle = document.getElementById('menu-toggle');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.checked = false; // closes the menu
+    });
+  });
+    </script>
   </body>
 </html>
