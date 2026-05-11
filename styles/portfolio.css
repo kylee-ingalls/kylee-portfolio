@@ -93,9 +93,25 @@ p {
 /* ---------------- NAVIGATION BAR ---------------- */
 nav {
   display: flex;
+  background-color: var(--secondary-color);
   justify-content: space-between;
   align-items: center;
-  padding: 5px 1rem;;
+  padding: 5px 1rem;
+  position: relative;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: #272142;
+  text-decoration: none;
+  line-height: 1;
+  padding-top: 10px;
+}
+
+.logo-text:hover {
+  color: #0E59C3;
+  text-decoration: underline;
 }
 
 /* Navigation links */
@@ -193,12 +209,6 @@ nav {
   #menu-toggle:checked + .hamburger span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
   }
-}
-
-/* Full-width nav background */
-body.home nav {
-  background-color: #e3f5e7;
-  width: 100%;
 }
 
 /* Container inside nav */
@@ -471,7 +481,7 @@ footer .email-link {
 }
 
 footer .email-link:hover {
-  color: var(--button-color-filled);
+  color: #0E59C3;
   text-decoration: underline;
 }
 
@@ -493,7 +503,7 @@ footer .social-links a {
 
 footer .social-links a:hover {
   color: white;
-  background: #a8006b;
+  background: #0E59C3;
 }
 
 footer .contact-box p {
