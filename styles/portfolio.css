@@ -1,9 +1,9 @@
 :root {
-  --button-color: #a12f1b;
-  --button-color-hover: #5c010a;
-  --secondary-color: #f7f5fd;
-  --button-color-filled: #02a6a3;
-  --button-color-filled-hover: #700047;
+  --button-color: #5A1B31;
+  --button-color-hover: #2c0c17;
+  --secondary-color: #E3F5E7;
+  --button-color-filled: #DED4A3;
+  --button-color-filled-hover: #2c0c17;
   --font-heading: "Chewy", cursive;
   --font-body: "Poppins", sans-serif;
 }
@@ -50,7 +50,6 @@ p {
   cursor: pointer;
 }
 
-/* Red button */
 .btn-branding {
   background-color: var(--button-color);
   color: white;
@@ -71,8 +70,8 @@ p {
 /* Outline button */
 .btn-branding-outline {
   background-color: white;
-  color: #026461;
-  border: 2px solid #025f5d;
+  color: #0E59C3;
+  border: 2px solid #0E59C3;
 }
 
 .btn-branding-outline:hover {
@@ -96,8 +95,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 1rem;
-  background-color: #ffe181;
+  padding: 5px 1rem;;
 }
 
 /* Navigation links */
@@ -118,7 +116,7 @@ nav {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #a12f1b;
+  color: #0E59C3;
   text-decoration: underline;
 }
 
@@ -150,31 +148,24 @@ nav {
   transition: 0.3s;
 }
 
-/* ---------------- TOGGLE MENU ---------------- */
-
-/* Closed state (mobile) */
-.nav-links {
-  max-height: none; /* desktop: show by default */
-  overflow: visible;
-  transition: max-height 0.3s ease;
-}
-
-/* Responsive: mobile */
+/* ---------------- MOBILE NAV ---------------- */
 @media (max-width: 768px) {
-  /* Show hamburger */
+
   .hamburger {
     display: flex;
   }
 
-  /* Mobile nav */
   .nav-links {
     flex-direction: column;
+
     position: absolute;
     top: 60px;
     right: 0;
+
     width: 100%;
-    background-color: white;
-    max-height: 0; /* start closed */
+    background-color: #E3F5E7;
+
+    max-height: 0;
     overflow: hidden;
 
     z-index: 10;
@@ -185,18 +176,20 @@ nav {
     padding: 1rem 0;
   }
 
-  /* Open menu when checkbox checked */
+  /* OPEN MENU */
   #menu-toggle:checked ~ .nav-links {
-    max-height: 500px; /* enough to show all links */
+    max-height: 500px;
   }
 
-  /* Hamburger animation to X */
+  /* HAMBURGER → X */
   #menu-toggle:checked + .hamburger span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
+
   #menu-toggle:checked + .hamburger span:nth-child(2) {
     opacity: 0;
   }
+
   #menu-toggle:checked + .hamburger span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
   }
@@ -204,11 +197,11 @@ nav {
 
 /* Full-width nav background */
 body.home nav {
-  background-color: #ffe181;
+  background-color: #e3f5e7;
   width: 100%;
 }
 
-/* Container inside nav keeps padding but stretches logo + links */
+/* Container inside nav */
 .nav-container {
   display: flex;
   justify-content: space-between; /* logo left, links right */
@@ -219,26 +212,56 @@ body.home nav {
   box-sizing: border-box;
 }
 
-/* Ensure links stay on right */
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* HERO SECTION */
+
+.hero-content {
+  flex: 1;
 }
 
-/*HERO SECTION*/
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 20px;
+}
 
 .hero {
-  background-color: #ffe181;
-  text-align: center;
-  padding: clamp(1.5rem, 4vw, 1.25rem) 1.25rem;
+  background-color: #e3f5e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin: 0;
+  padding: 0rem 1.25rem 4rem;
+}
+
+/* Left side */
+.hero-content {
+  flex: 0 1 auto;
+}
+
+/* Right side image */
+.hero-image {
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 320px;
+  max-width: 100%;
 }
 
 .hero h1 {
-  padding-top: 0rem;
-  font-size: clamp(6rem, 6vw, 4rem);
+  margin-top: 0;
+
+  /* min, preferred, max */
+  font-size: clamp(4rem, 8vw, 6rem);
 }
 
 .hero h2 {
@@ -247,16 +270,30 @@ body.home nav {
 
 .hero p {
   font-size: clamp(1rem, 2vw, 1.25rem);
+  max-width: 600px;
 }
 
-/* Space between hero and first grid row */
+/* Space below hero */
 .container > .row:first-child {
-  margin-top: auto; /* adjust as needed */
+  margin-top: 2rem;
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
-  .container > .row:first-child {
-    margin-top: 2rem;
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-image img {
+    width: 220px;
   }
 }
 
@@ -464,7 +501,7 @@ footer .contact-box p {
 }
 
 footer .contact-box {
-  background-color: #d2fdfc;
+  background-color: #e3f5e7;
   padding: 30px 80px;
   border-radius: 8px;
   max-width: 70%;
